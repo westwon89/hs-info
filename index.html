@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0180)file:///C:/Users/Administrator/Downloads/2026_%EA%B0%95%EB%B6%81%EC%A4%91_%EC%A7%84%ED%95%99%EC%84%A4%EB%AA%85%ED%9A%8C_%EC%82%AC%EC%A0%84%EC%84%A4%EB%AC%B8_%EA%B2%B0%EA%B3%BC.html -->
+<!-- saved from url=(0182)file:///C:/Users/Administrator/Downloads/2026_%EA%B0%95%EB%B6%81%EC%A4%91_%EC%A7%84%ED%95%99%EC%84%A4%EB%AA%85%ED%9A%8C_%EC%82%AC%EC%A0%84%EC%84%A4%EB%AC%B8_%EA%B2%B0%EA%B3%BC_1.html -->
 <html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>2026 강북중 고교 진학설명회 — 사전 설문 결과</title>
 <link href="./index_files/css2" rel="stylesheet">
-<script src="./index_files/chart.umd.min.js.다운로드"></script>
 <style>
   :root {
     --navy: #1a2744;
@@ -16,223 +15,68 @@
     --white: #ffffff;
     --gray: #6b7a8d;
     --border: #dde4ee;
-    --tag-bg: #edf2fb;
   }
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', sans-serif; background: var(--light); color: var(--navy); line-height: 1.7; }
 
-  body {
-    font-family: 'Noto Sans KR', sans-serif;
-    background: var(--light);
-    color: var(--navy);
-    line-height: 1.7;
-  }
-
-  /* ── HEADER ── */
   .page-header {
-    background: var(--navy);
-    color: white;
+    background: var(--navy); color: white;
     padding: 52px 48px 44px;
-    position: relative;
-    overflow: hidden;
+    position: relative; overflow: hidden;
   }
   .page-header::before {
-    content: '';
-    position: absolute;
-    right: -60px; top: -60px;
-    width: 340px; height: 340px;
-    border-radius: 50%;
-    background: rgba(91,155,213,0.13);
+    content:''; position:absolute; right:-60px; top:-60px;
+    width:340px; height:340px; border-radius:50%;
+    background:rgba(91,155,213,0.13);
   }
   .page-header::after {
-    content: '';
-    position: absolute;
-    right: 60px; bottom: -80px;
-    width: 200px; height: 200px;
-    border-radius: 50%;
-    background: rgba(232,144,58,0.10);
+    content:''; position:absolute; right:60px; bottom:-80px;
+    width:200px; height:200px; border-radius:50%;
+    background:rgba(232,144,58,0.10);
   }
-  .header-label {
-    font-size: 12px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--sky);
-    font-weight: 500;
-    margin-bottom: 10px;
-  }
-  .header-title {
-    font-family: 'Noto Serif KR', serif;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1.4;
-    margin-bottom: 8px;
-  }
-  .header-sub {
-    font-size: 14px;
-    color: rgba(255,255,255,0.6);
-    font-weight: 300;
-  }
-  .header-meta {
-    margin-top: 28px;
-    display: flex;
-    gap: 32px;
-  }
-  .meta-item {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-  .meta-label { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 0.08em; }
-  .meta-value { font-size: 22px; font-weight: 700; color: var(--accent); }
-  .meta-unit { font-size: 13px; color: rgba(255,255,255,0.7); }
+  .header-label { font-size:12px; letter-spacing:0.18em; color:var(--sky); font-weight:500; margin-bottom:10px; }
+  .header-title { font-family:'Noto Serif KR',serif; font-size:28px; font-weight:700; line-height:1.4; margin-bottom:8px; }
+  .header-sub { font-size:14px; color:rgba(255,255,255,0.6); font-weight:300; }
+  .header-meta { margin-top:28px; display:flex; gap:32px; }
+  .meta-item { display:flex; flex-direction:column; gap:2px; }
+  .meta-label { font-size:11px; color:rgba(255,255,255,0.5); letter-spacing:0.08em; }
+  .meta-value { font-size:22px; font-weight:700; color:var(--accent); }
+  .meta-unit { font-size:13px; color:rgba(255,255,255,0.7); }
 
-  /* ── LAYOUT ── */
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 24px 80px;
-  }
+  .container { max-width:900px; margin:0 auto; padding:40px 24px 80px; }
 
-  /* ── SECTION HEADER ── */
-  .section-header {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 20px;
-  }
-  .q-badge {
-    background: var(--blue);
-    color: white;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    padding: 4px 10px;
-    border-radius: 4px;
-    flex-shrink: 0;
-  }
-  .section-title {
-    font-family: 'Noto Serif KR', serif;
-    font-size: 17px;
-    font-weight: 600;
-    color: var(--navy);
-  }
+  .section-header { display:flex; align-items:center; gap:14px; margin-bottom:20px; }
+  .q-badge { background:var(--blue); color:white; font-size:11px; font-weight:700; letter-spacing:0.1em; padding:4px 10px; border-radius:4px; flex-shrink:0; }
+  .section-title { font-family:'Noto Serif KR',serif; font-size:17px; font-weight:600; color:var(--navy); }
 
-  /* ── CARD ── */
-  .card {
-    background: var(--white);
-    border-radius: 14px;
-    padding: 32px;
-    margin-bottom: 36px;
-    box-shadow: 0 2px 16px rgba(26,39,68,0.07);
-    border: 1px solid var(--border);
-  }
+  .card { background:var(--white); border-radius:14px; padding:32px; margin-bottom:36px; box-shadow:0 2px 16px rgba(26,39,68,0.07); border:1px solid var(--border); }
 
-  /* ── CHART WRAPPER ── */
-  .chart-wrap {
-    position: relative;
-    height: 300px;
-    margin-top: 8px;
+  /* ── 순수 CSS 바 차트 ── */
+  .bar-chart { display:flex; flex-direction:column; gap:13px; margin-top:8px; }
+  .bar-row { display:grid; grid-template-columns:190px 1fr 48px; align-items:center; gap:12px; }
+  .bar-label { font-size:13px; color:var(--navy); text-align:right; line-height:1.3; }
+  .bar-track { background:#edf2fb; border-radius:6px; height:28px; overflow:hidden; }
+  .bar-fill {
+    height:100%; border-radius:6px;
+    width:0%;
+    transition: width 0.9s cubic-bezier(.4,0,.2,1);
   }
+  .bar-value { font-size:13px; font-weight:700; color:var(--navy); }
 
-  /* ── STAT PILLS (chart summary) ── */
-  .stat-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 22px;
-  }
-  .stat-pill {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--tag-bg);
-    border-radius: 99px;
-    padding: 6px 14px;
-    font-size: 13px;
-    color: var(--navy);
-  }
-  .stat-pill .dot {
-    width: 10px; height: 10px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-  .stat-pill strong { font-weight: 700; color: var(--blue); }
+  .note { font-size:12px; color:var(--gray); margin-top:18px; }
+  .divider { height:1px; background:var(--border); margin:28px 0; }
 
-  /* ── Q3/Q4 CATEGORY GROUPS ── */
-  .category-block {
-    margin-bottom: 28px;
-  }
-  .category-block:last-child { margin-bottom: 0; }
-  .category-label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 12px;
-  }
-  .cat-icon {
-    width: 32px; height: 32px;
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 15px;
-    flex-shrink: 0;
-  }
-  .cat-name {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--navy);
-  }
-  .cat-count {
-    margin-left: auto;
-    background: var(--accent);
-    color: white;
-    font-size: 12px;
-    font-weight: 700;
-    padding: 3px 10px;
-    border-radius: 99px;
-  }
-  .q-list {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding-left: 42px;
-  }
-  .q-item {
-    font-size: 13.5px;
-    color: #3a4a62;
-    padding: 8px 14px;
-    background: var(--light);
-    border-radius: 7px;
-    border-left: 3px solid var(--border);
-    line-height: 1.5;
-  }
-  .q-item.highlight {
-    border-left-color: var(--accent);
-    background: #fff8f1;
-  }
+  .category-block { margin-bottom:28px; }
+  .category-block:last-child { margin-bottom:0; }
+  .category-label { display:flex; align-items:center; gap:10px; margin-bottom:12px; }
+  .cat-icon { width:32px; height:32px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:15px; flex-shrink:0; }
+  .cat-name { font-size:15px; font-weight:700; color:var(--navy); }
+  .cat-count { margin-left:auto; background:var(--accent); color:white; font-size:12px; font-weight:700; padding:3px 10px; border-radius:99px; white-space:nowrap; }
+  .q-list { display:flex; flex-direction:column; gap:6px; padding-left:42px; }
+  .q-item { font-size:13.5px; color:#3a4a62; padding:8px 14px; background:var(--light); border-radius:7px; border-left:3px solid var(--border); line-height:1.5; }
+  .q-item.highlight { border-left-color:var(--accent); background:#fff8f1; }
 
-  /* ── DIVIDER ── */
-  .divider {
-    height: 1px;
-    background: var(--border);
-    margin: 32px 0;
-  }
-
-  /* ── NOTE ── */
-  .note {
-    font-size: 12px;
-    color: var(--gray);
-    margin-top: 14px;
-  }
-
-  /* ── FOOTER ── */
-  .footer {
-    text-align: center;
-    font-size: 12px;
-    color: var(--gray);
-    margin-top: 60px;
-    padding-top: 24px;
-    border-top: 1px solid var(--border);
-  }
+  .footer { text-align:center; font-size:12px; color:var(--gray); padding:24px 24px 40px; border-top:1px solid var(--border); max-width:900px; margin:40px auto 0; }
 </style>
 </head>
 <body>
@@ -265,10 +109,35 @@
     <span class="section-title">현재 관심 있는 고등학교 유형은 무엇인가요? <small style="font-size:13px;font-weight:400;color:var(--gray)">(복수 선택)</small></span>
   </div>
   <div class="card">
-    <div class="chart-wrap">
-      <canvas id="chart1" width="983" height="375" style="display: block; box-sizing: border-box; height: 300px; width: 786px;"></canvas>
-    </div>
-    <div class="stat-row" id="pills1"><div class="stat-pill"><span class="dot" style="background:#2563a8"></span>일반고 <strong>77</strong></div><div class="stat-pill"><span class="dot" style="background:#3a7fc4"></span>특성화고 <strong>19</strong></div><div class="stat-pill"><span class="dot" style="background:#5b9bd5"></span>아직 잘 모르겠음 <strong>19</strong></div><div class="stat-pill"><span class="dot" style="background:#7cb4e0"></span>예술·체육계열고 <strong>15</strong></div><div class="stat-pill"><span class="dot" style="background:#e8903a"></span>자율형사립고(자사고) <strong>7</strong></div><div class="stat-pill"><span class="dot" style="background:#f4b05e"></span>특목고 <strong>6</strong></div><div class="stat-pill"><span class="dot" style="background:#c8dff5"></span>마이스터고 <strong>4</strong></div></div>
+    <div class="bar-chart" id="chart1"><div class="bar-row">
+        <div class="bar-label">일반고</div>
+        <div class="bar-track"><div class="bar-fill" id="fill-chart1-0" style="background: rgb(37, 99, 168); width: 100%;"></div></div>
+        <div class="bar-value">77명</div>
+      </div><div class="bar-row">
+        <div class="bar-label">특성화고</div>
+        <div class="bar-track"><div class="bar-fill" id="fill-chart1-1" style="background: rgb(58, 127, 196); width: 24.7%;"></div></div>
+        <div class="bar-value">19명</div>
+      </div><div class="bar-row">
+        <div class="bar-label">아직 잘 모르겠음</div>
+        <div class="bar-track"><div class="bar-fill" id="fill-chart1-2" style="background: rgb(91, 155, 213); width: 24.7%;"></div></div>
+        <div class="bar-value">19명</div>
+      </div><div class="bar-row">
+        <div class="bar-label">예술·체육계열고</div>
+        <div class="bar-track"><div class="bar-fill" id="fill-chart1-3" style="background: rgb(124, 180, 224); width: 19.5%;"></div></div>
+        <div class="bar-value">15명</div>
+      </div><div class="bar-row">
+        <div class="bar-label">자율형사립고(자사고)</div>
+        <div class="bar-track"><div class="bar-fill" id="fill-chart1-4" style="background: rgb(232, 144, 58); width: 9.1%;"></div></div>
+        <div class="bar-value">7명</div>
+      </div><div class="bar-row">
+        <div class="bar-label">특목고</div>
+        <div class="bar-track"><div class="bar-fill" id="fill-chart1-5" style="background: rgb(244, 176, 94); width: 7.8%;"></div></div>
+        <div class="bar-value">6명</div>
+      </div><div class="bar-row">
+        <div class="bar-label">마이스터고</div>
+        <div class="bar-track"><div class="bar-fill" id="fill-chart1-6" style="background: rgb(200, 223, 245); width: 5.2%;"></div></div>
+        <div class="bar-value">4명</div>
+      </div></div>
     <p class="note">* 복수 선택 허용 · 응답자 100명 기준 선택 빈도</p>
   </div>
 
@@ -278,10 +147,35 @@
     <span class="section-title">가장 궁금한 주제는 무엇인가요? <small style="font-size:13px;font-weight:400;color:var(--gray)">(복수 선택)</small></span>
   </div>
   <div class="card">
-    <div class="chart-wrap">
-      <canvas id="chart2" width="983" height="375" style="display: block; box-sizing: border-box; height: 300px; width: 786px;"></canvas>
-    </div>
-    <div class="stat-row" id="pills2"><div class="stat-pill"><span class="dot" style="background:#1a2744"></span>진로 선택 <strong>62</strong></div><div class="stat-pill"><span class="dot" style="background:#2563a8"></span>공부 방법 <strong>55</strong></div><div class="stat-pill"><span class="dot" style="background:#3a7fc4"></span>고교 내신 성적 관리 <strong>49</strong></div><div class="stat-pill"><span class="dot" style="background:#5b9bd5"></span>고등학교생활 <strong>39</strong></div><div class="stat-pill"><span class="dot" style="background:#7cb4e0"></span>중학 내신 성적 관리 <strong>34</strong></div><div class="stat-pill"><span class="dot" style="background:#e8903a"></span>대입 준비 <strong>33</strong></div><div class="stat-pill"><span class="dot" style="background:#f4b05e"></span>고등학교 종류와 차이 <strong>24</strong></div></div>
+    <div class="bar-chart" id="chart2"><div class="bar-row">
+        <div class="bar-label">진로 선택</div>
+        <div class="bar-track"><div class="bar-fill" id="fill-chart2-0" style="background: rgb(26, 39, 68); width: 100%;"></div></div>
+        <div class="bar-value">62명</div>
+      </div><div class="bar-row">
+        <div class="bar-label">공부 방법</div>
+        <div class="bar-track"><div class="bar-fill" id="fill-chart2-1" style="background: rgb(37, 99, 168); width: 88.7%;"></div></div>
+        <div class="bar-value">55명</div>
+      </div><div class="bar-row">
+        <div class="bar-label">고교 내신 성적 관리</div>
+        <div class="bar-track"><div class="bar-fill" id="fill-chart2-2" style="background: rgb(58, 127, 196); width: 79%;"></div></div>
+        <div class="bar-value">49명</div>
+      </div><div class="bar-row">
+        <div class="bar-label">고등학교생활</div>
+        <div class="bar-track"><div class="bar-fill" id="fill-chart2-3" style="background: rgb(91, 155, 213); width: 62.9%;"></div></div>
+        <div class="bar-value">39명</div>
+      </div><div class="bar-row">
+        <div class="bar-label">중학 내신 성적 관리</div>
+        <div class="bar-track"><div class="bar-fill" id="fill-chart2-4" style="background: rgb(124, 180, 224); width: 54.8%;"></div></div>
+        <div class="bar-value">34명</div>
+      </div><div class="bar-row">
+        <div class="bar-label">대입 준비</div>
+        <div class="bar-track"><div class="bar-fill" id="fill-chart2-5" style="background: rgb(232, 144, 58); width: 53.2%;"></div></div>
+        <div class="bar-value">33명</div>
+      </div><div class="bar-row">
+        <div class="bar-label">고등학교 종류와 차이</div>
+        <div class="bar-track"><div class="bar-fill" id="fill-chart2-6" style="background: rgb(244, 176, 94); width: 38.7%;"></div></div>
+        <div class="bar-value">24명</div>
+      </div></div>
     <p class="note">* 복수 선택 허용 · 응답자 100명 기준 선택 빈도</p>
   </div>
 
@@ -292,7 +186,6 @@
   </div>
   <div class="card">
 
-    <!-- 카테고리 1 -->
     <div class="category-block">
       <div class="category-label">
         <div class="cat-icon" style="background:#edf2fb;">🏫</div>
@@ -316,7 +209,6 @@
     </div>
     <div class="divider"></div>
 
-    <!-- 카테고리 2 -->
     <div class="category-block">
       <div class="category-label">
         <div class="cat-icon" style="background:#fff4ec;">📊</div>
@@ -327,7 +219,6 @@
         <div class="q-item highlight">중학교 성적이 고등학교 성적/대학 입학에 영향을 끼치나요? <em style="color:var(--gray);font-size:12px">(유사 4건)</em></div>
         <div class="q-item">내신 등급을 잘 따기 위해 무엇이 필요한가요? / 내신 관리를 합리적으로 하는 방법</div>
         <div class="q-item">인서울 대학 가려면 내신 관리를 어떻게 해야 하나요?</div>
-        <div class="q-item">고등학교 내신 성적 관리 방법</div>
         <div class="q-item">여고가 내신 따기 어려운 건 사실인가요? <em style="color:var(--gray);font-size:12px">(2건)</em></div>
         <div class="q-item">좋은 고등학교에 가려면 성적이 어느 정도 나와야 하나요?</div>
         <div class="q-item">일반고를 가려고 해도 성적 관리가 필요한가요?</div>
@@ -337,7 +228,6 @@
     </div>
     <div class="divider"></div>
 
-    <!-- 카테고리 3 -->
     <div class="category-block">
       <div class="category-label">
         <div class="cat-icon" style="background:#f0f9f0;">📚</div>
@@ -357,7 +247,6 @@
     </div>
     <div class="divider"></div>
 
-    <!-- 카테고리 4 -->
     <div class="category-block">
       <div class="category-label">
         <div class="cat-icon" style="background:#fdf0f8;">🎓</div>
@@ -375,7 +264,6 @@
     </div>
     <div class="divider"></div>
 
-    <!-- 카테고리 5 -->
     <div class="category-block">
       <div class="category-label">
         <div class="cat-icon" style="background:#fffbeb;">🔖</div>
@@ -391,7 +279,6 @@
     </div>
     <div class="divider"></div>
 
-    <!-- 카테고리 6 -->
     <div class="category-block">
       <div class="category-label">
         <div class="cat-icon" style="background:#f0f4ff;">🏭</div>
@@ -412,7 +299,6 @@
     </div>
     <div class="divider"></div>
 
-    <!-- 카테고리 7 -->
     <div class="category-block">
       <div class="category-label">
         <div class="cat-icon" style="background:#f5f0ff;">🧭</div>
@@ -442,79 +328,46 @@
     </div>
   </div>
 
-</div><!-- /container -->
+</div>
 
-<div class="footer" style="max-width:900px;margin:0 auto;padding-bottom:40px;">
+<div class="footer">
   2026 강북중학교 · 3학년 고교 진학설명회 사전 설문 분석 · 담당교사 제공용
 </div>
 
 <script>
-// ── 색상 팔레트 ──
-const palette1 = ['#2563a8','#3a7fc4','#5b9bd5','#7cb4e0','#e8903a','#f4b05e','#c8dff5'];
-const palette2 = ['#1a2744','#2563a8','#3a7fc4','#5b9bd5','#7cb4e0','#e8903a','#f4b05e'];
+  const q1 = {
+    labels: ['일반고', '특성화고', '아직 잘 모르겠음', '예술·체육계열고', '자율형사립고(자사고)', '특목고', '마이스터고'],
+    data:   [77, 19, 19, 15, 7, 6, 4],
+    colors: ['#2563a8','#3a7fc4','#5b9bd5','#7cb4e0','#e8903a','#f4b05e','#c8dff5']
+  };
+  const q2 = {
+    labels: ['진로 선택', '공부 방법', '고교 내신 성적 관리', '고등학교생활', '중학 내신 성적 관리', '대입 준비', '고등학교 종류와 차이'],
+    data:   [62, 55, 49, 39, 34, 33, 24],
+    colors: ['#1a2744','#2563a8','#3a7fc4','#5b9bd5','#7cb4e0','#e8903a','#f4b05e']
+  };
 
-// Q1 데이터
-const q1Labels = ['일반고','특성화고','아직 잘 모르겠음','예술·체육계열고','자율형사립고(자사고)','특목고','마이스터고'];
-const q1Data   = [77, 19, 19, 15, 7, 6, 4];
+  function renderChart(containerId, chartData) {
+    const container = document.getElementById(containerId);
+    const max = Math.max(...chartData.data);
+    chartData.labels.forEach((label, i) => {
+      const pct = (chartData.data[i] / max * 100).toFixed(1);
+      const row = document.createElement('div');
+      row.className = 'bar-row';
+      row.innerHTML = `
+        <div class="bar-label">${label}</div>
+        <div class="bar-track"><div class="bar-fill" id="fill-${containerId}-${i}" style="background:${chartData.colors[i]}"></div></div>
+        <div class="bar-value">${chartData.data[i]}명</div>
+      `;
+      container.appendChild(row);
+      // animate
+      setTimeout(() => {
+        document.getElementById(`fill-${containerId}-${i}`).style.width = pct + '%';
+      }, 100 + i * 70);
+    });
+  }
 
-// Q2 데이터
-const q2Labels = ['진로 선택','공부 방법','고교 내신 성적 관리','고등학교생활','중학 내신 성적 관리','대입 준비','고등학교 종류와 차이'];
-const q2Data   = [62, 55, 49, 39, 34, 33, 24];
-
-function buildChart(id, labels, data, colors) {
-  const ctx = document.getElementById(id).getContext('2d');
-  return new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels,
-      datasets: [{
-        data,
-        backgroundColor: colors,
-        borderRadius: 6,
-        borderSkipped: false,
-      }]
-    },
-    options: {
-      indexAxis: 'y',
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          callbacks: {
-            label: ctx => `  ${ctx.raw}명 선택`
-          }
-        }
-      },
-      scales: {
-        x: {
-          beginAtZero: true,
-          grid: { color: '#eee' },
-          ticks: { font: { family: 'Noto Sans KR', size: 12 }, color: '#6b7a8d' }
-        },
-        y: {
-          grid: { display: false },
-          ticks: { font: { family: 'Noto Sans KR', size: 13 }, color: '#1a2744' }
-        }
-      }
-    }
-  });
-}
-
-function buildPills(containerId, labels, data, colors) {
-  const el = document.getElementById(containerId);
-  labels.forEach((l, i) => {
-    const pill = document.createElement('div');
-    pill.className = 'stat-pill';
-    pill.innerHTML = `<span class="dot" style="background:${colors[i]}"></span>${l} <strong>${data[i]}</strong>`;
-    el.appendChild(pill);
-  });
-}
-
-buildChart('chart1', q1Labels, q1Data, palette1);
-buildChart('chart2', q2Labels, q2Data, palette2);
-buildPills('pills1', q1Labels, q1Data, palette1);
-buildPills('pills2', q2Labels, q2Data, palette2);
+  renderChart('chart1', q1);
+  renderChart('chart2', q2);
 </script>
 
 
