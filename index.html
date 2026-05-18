@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<!-- saved from url=(0180)file:///C:/Users/Administrator/Downloads/2026_%EA%B0%95%EB%B6%81%EC%A4%91_%EC%A7%84%ED%95%99%EC%84%A4%EB%AA%85%ED%9A%8C_%EC%82%AC%EC%A0%84%EC%84%A4%EB%AC%B8_%EA%B2%B0%EA%B3%BC.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 강북중 고교 진학설명회 — 사전 설문 결과</title>
+<link href="./index_files/css2" rel="stylesheet">
+<script src="./index_files/chart.umd.min.js.다운로드"></script>
+<style>
+  :root {
+    --navy: #1a2744;
+    --blue: #2563a8;
+    --sky: #5b9bd5;
+    --accent: #e8903a;
+    --light: #f4f7fb;
+    --white: #ffffff;
+    --gray: #6b7a8d;
+    --border: #dde4ee;
+    --tag-bg: #edf2fb;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: var(--light);
+    color: var(--navy);
+    line-height: 1.7;
+  }
+
+  /* ── HEADER ── */
+  .page-header {
+    background: var(--navy);
+    color: white;
+    padding: 52px 48px 44px;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-header::before {
+    content: '';
+    position: absolute;
+    right: -60px; top: -60px;
+    width: 340px; height: 340px;
+    border-radius: 50%;
+    background: rgba(91,155,213,0.13);
+  }
+  .page-header::after {
+    content: '';
+    position: absolute;
+    right: 60px; bottom: -80px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(232,144,58,0.10);
+  }
+  .header-label {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sky);
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .header-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  .header-sub {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    font-weight: 300;
+  }
+  .header-meta {
+    margin-top: 28px;
+    display: flex;
+    gap: 32px;
+  }
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .meta-label { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 0.08em; }
+  .meta-value { font-size: 22px; font-weight: 700; color: var(--accent); }
+  .meta-unit { font-size: 13px; color: rgba(255,255,255,0.7); }
+
+  /* ── LAYOUT ── */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  .q-badge {
+    background: var(--blue);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 4px 10px;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+  .section-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  /* ── CARD ── */
+  .card {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 32px;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 16px rgba(26,39,68,0.07);
+    border: 1px solid var(--border);
+  }
+
+  /* ── CHART WRAPPER ── */
+  .chart-wrap {
+    position: relative;
+    height: 300px;
+    margin-top: 8px;
+  }
+
+  /* ── STAT PILLS (chart summary) ── */
+  .stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+  }
+  .stat-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--tag-bg);
+    border-radius: 99px;
+    padding: 6px 14px;
+    font-size: 13px;
+    color: var(--navy);
+  }
+  .stat-pill .dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .stat-pill strong { font-weight: 700; color: var(--blue); }
+
+  /* ── Q3/Q4 CATEGORY GROUPS ── */
+  .category-block {
+    margin-bottom: 28px;
+  }
+  .category-block:last-child { margin-bottom: 0; }
+  .category-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .cat-icon {
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+  .cat-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .cat-count {
+    margin-left: auto;
+    background: var(--accent);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 99px;
+  }
+  .q-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-left: 42px;
+  }
+  .q-item {
+    font-size: 13.5px;
+    color: #3a4a62;
+    padding: 8px 14px;
+    background: var(--light);
+    border-radius: 7px;
+    border-left: 3px solid var(--border);
+    line-height: 1.5;
+  }
+  .q-item.highlight {
+    border-left-color: var(--accent);
+    background: #fff8f1;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 32px 0;
+  }
+
+  /* ── NOTE ── */
+  .note {
+    font-size: 12px;
+    color: var(--gray);
+    margin-top: 14px;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: var(--gray);
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="header-label">Pre-Session Survey Results</div>
+  <div class="header-title">2026 강북중학교 3학년<br>고교 진학설명회 사전 설문 결과</div>
+  <div class="header-sub">설명회 일시: 2026년 5월 20일 · 강북중학교</div>
+  <div class="header-meta">
+    <div class="meta-item">
+      <span class="meta-label">총 응답 수</span>
+      <span class="meta-value">100<span class="meta-unit">명</span></span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">유효 질문(Q3)</span>
+      <span class="meta-value">85<span class="meta-unit">건</span></span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">설문 문항</span>
+      <span class="meta-value">4<span class="meta-unit">개</span></span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Q1 -->
+  <div class="section-header">
+    <span class="q-badge">Q 1</span>
+    <span class="section-title">현재 관심 있는 고등학교 유형은 무엇인가요? <small style="font-size:13px;font-weight:400;color:var(--gray)">(복수 선택)</small></span>
+  </div>
+  <div class="card">
+    <div class="chart-wrap">
+      <canvas id="chart1" width="983" height="375" style="display: block; box-sizing: border-box; height: 300px; width: 786px;"></canvas>
+    </div>
+    <div class="stat-row" id="pills1"><div class="stat-pill"><span class="dot" style="background:#2563a8"></span>일반고 <strong>77</strong></div><div class="stat-pill"><span class="dot" style="background:#3a7fc4"></span>특성화고 <strong>19</strong></div><div class="stat-pill"><span class="dot" style="background:#5b9bd5"></span>아직 잘 모르겠음 <strong>19</strong></div><div class="stat-pill"><span class="dot" style="background:#7cb4e0"></span>예술·체육계열고 <strong>15</strong></div><div class="stat-pill"><span class="dot" style="background:#e8903a"></span>자율형사립고(자사고) <strong>7</strong></div><div class="stat-pill"><span class="dot" style="background:#f4b05e"></span>특목고 <strong>6</strong></div><div class="stat-pill"><span class="dot" style="background:#c8dff5"></span>마이스터고 <strong>4</strong></div></div>
+    <p class="note">* 복수 선택 허용 · 응답자 100명 기준 선택 빈도</p>
+  </div>
+
+  <!-- Q2 -->
+  <div class="section-header">
+    <span class="q-badge">Q 2</span>
+    <span class="section-title">가장 궁금한 주제는 무엇인가요? <small style="font-size:13px;font-weight:400;color:var(--gray)">(복수 선택)</small></span>
+  </div>
+  <div class="card">
+    <div class="chart-wrap">
+      <canvas id="chart2" width="983" height="375" style="display: block; box-sizing: border-box; height: 300px; width: 786px;"></canvas>
+    </div>
+    <div class="stat-row" id="pills2"><div class="stat-pill"><span class="dot" style="background:#1a2744"></span>진로 선택 <strong>62</strong></div><div class="stat-pill"><span class="dot" style="background:#2563a8"></span>공부 방법 <strong>55</strong></div><div class="stat-pill"><span class="dot" style="background:#3a7fc4"></span>고교 내신 성적 관리 <strong>49</strong></div><div class="stat-pill"><span class="dot" style="background:#5b9bd5"></span>고등학교생활 <strong>39</strong></div><div class="stat-pill"><span class="dot" style="background:#7cb4e0"></span>중학 내신 성적 관리 <strong>34</strong></div><div class="stat-pill"><span class="dot" style="background:#e8903a"></span>대입 준비 <strong>33</strong></div><div class="stat-pill"><span class="dot" style="background:#f4b05e"></span>고등학교 종류와 차이 <strong>24</strong></div></div>
+    <p class="note">* 복수 선택 허용 · 응답자 100명 기준 선택 빈도</p>
+  </div>
+
+  <!-- Q3 -->
+  <div class="section-header">
+    <span class="q-badge">Q 3</span>
+    <span class="section-title">강사님께 꼭 묻고 싶은 질문 1가지</span>
+  </div>
+  <div class="card">
+
+    <!-- 카테고리 1 -->
+    <div class="category-block">
+      <div class="category-label">
+        <div class="cat-icon" style="background:#edf2fb;">🏫</div>
+        <span class="cat-name">고교 유형 비교 · 선택 (일반고 vs 특성화고 vs 자사고 등)</span>
+        <span class="cat-count">22건</span>
+      </div>
+      <div class="q-list">
+        <div class="q-item highlight">대학 진학할 때 일반고와 특성화고 중 어떤 곳이 유리한가요? <em style="color:var(--gray);font-size:12px">(동일 유형 6건)</em></div>
+        <div class="q-item">대학 진학 시 수시로 가려고 하는데 일반고 또는 자사고, 특목고 중에서 뭐가 유리할까요?</div>
+        <div class="q-item">대입 때 일반고와 자사고 중 어떤 곳이 유리한가요?</div>
+        <div class="q-item">특목고 가는 게 대학 가기 더 유리한가요?</div>
+        <div class="q-item">자사고와 일반고의 장점과 단점이 무엇인가요?</div>
+        <div class="q-item">자사고는 일반고보다 얼마나 더 어렵나요?</div>
+        <div class="q-item">일반고와 마이스터고 중 저희 시대에 어디를 가는 게 더 좋을까요?</div>
+        <div class="q-item">일반고 중에서 대학 진학할 때 내신 따기 좋은 일반고가 있나요?</div>
+        <div class="q-item">일반고를 가도 대학 갈 수 있나요? / 일반고에서 취업이 어렵지 않나요?</div>
+        <div class="q-item">일반고는 무슨 점이 좋은가요?</div>
+        <div class="q-item">대학 진학할 때 일반고가 좋나요, 아님 예술·체육 계열이 유리한가요?</div>
+        <div class="q-item">진로가 가수면 특성화고가 좋나요, 일반고가 좋나요?</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- 카테고리 2 -->
+    <div class="category-block">
+      <div class="category-label">
+        <div class="cat-icon" style="background:#fff4ec;">📊</div>
+        <span class="cat-name">내신 성적 관리 (중학·고등)</span>
+        <span class="cat-count">18건</span>
+      </div>
+      <div class="q-list">
+        <div class="q-item highlight">중학교 성적이 고등학교 성적/대학 입학에 영향을 끼치나요? <em style="color:var(--gray);font-size:12px">(유사 4건)</em></div>
+        <div class="q-item">내신 등급을 잘 따기 위해 무엇이 필요한가요? / 내신 관리를 합리적으로 하는 방법</div>
+        <div class="q-item">인서울 대학 가려면 내신 관리를 어떻게 해야 하나요?</div>
+        <div class="q-item">고등학교 내신 성적 관리 방법</div>
+        <div class="q-item">여고가 내신 따기 어려운 건 사실인가요? <em style="color:var(--gray);font-size:12px">(2건)</em></div>
+        <div class="q-item">좋은 고등학교에 가려면 성적이 어느 정도 나와야 하나요?</div>
+        <div class="q-item">일반고를 가려고 해도 성적 관리가 필요한가요?</div>
+        <div class="q-item">중학교에서 고등학교로 넘어갔을 때의 성적 변화</div>
+        <div class="q-item">일반고는 다 갈 수 있나요? (성적 기준)</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- 카테고리 3 -->
+    <div class="category-block">
+      <div class="category-label">
+        <div class="cat-icon" style="background:#f0f9f0;">📚</div>
+        <span class="cat-name">공부 방법 · 학습 습관</span>
+        <span class="cat-count">13건</span>
+      </div>
+      <div class="q-list">
+        <div class="q-item">효율적으로 공부할 수 있는 방법은 무엇인가요?</div>
+        <div class="q-item">고등학교 가서 하면 좋을 공부법이 궁금해요</div>
+        <div class="q-item">공부를 어떻게 해야 하나요? / 공부 습관을 어떻게 들여야 하나요?</div>
+        <div class="q-item">학습 습관을 어떻게 관리해요?</div>
+        <div class="q-item">일반고 공부는 많이 어렵나요?</div>
+        <div class="q-item">고등학교 수학을 못하면 대학을 못 가나요?</div>
+        <div class="q-item">공부 어느 정도로 해야 인서울할 수 있나요?</div>
+        <div class="q-item">중학교 성적·학습 습관 관리</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- 카테고리 4 -->
+    <div class="category-block">
+      <div class="category-label">
+        <div class="cat-icon" style="background:#fdf0f8;">🎓</div>
+        <span class="cat-name">대입 제도 · 입시 전략</span>
+        <span class="cat-count">10건</span>
+      </div>
+      <div class="q-list">
+        <div class="q-item highlight">사람들이 잘 모를 만한 바뀐 입시 제도 <em style="color:var(--gray);font-size:12px">(2건)</em></div>
+        <div class="q-item">대학 진학을 하려면 무엇을 하는 게 가장 좋을까요?</div>
+        <div class="q-item">고등학교 다음에 대학교는 어떻게 해야 잘 갈 수 있나요?</div>
+        <div class="q-item">특성화고를 나와서 대학에 가는 것이 쉬운 편인가요?</div>
+        <div class="q-item">고교 모의고사 점수는 어떻게 받나요?</div>
+        <div class="q-item">일반고 관련 정보 · 고교학점제</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- 카테고리 5 -->
+    <div class="category-block">
+      <div class="category-label">
+        <div class="cat-icon" style="background:#fffbeb;">🔖</div>
+        <span class="cat-name">고교학점제</span>
+        <span class="cat-count">5건</span>
+      </div>
+      <div class="q-list">
+        <div class="q-item">고교학점제가 뭔지 / 정확히 뭔지 궁금해요 <em style="color:var(--gray);font-size:12px">(2건)</em></div>
+        <div class="q-item">고교학점제는 모든 학교에 다 있나요?</div>
+        <div class="q-item">고교학점제에 대해 자세하게 알고 싶어요</div>
+        <div class="q-item">고교학점제 뭐가 좋나요?</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- 카테고리 6 -->
+    <div class="category-block">
+      <div class="category-label">
+        <div class="cat-icon" style="background:#f0f4ff;">🏭</div>
+        <span class="cat-name">특성화고 · 마이스터고 관련</span>
+        <span class="cat-count">10건</span>
+      </div>
+      <div class="q-list">
+        <div class="q-item">특성화고 면접을 잘 보는 법 <em style="color:var(--gray);font-size:12px">(2건)</em></div>
+        <div class="q-item">특성화고는 성적이 중요한가요? / 특성화고에서 성적 관리 어떻게 하나요?</div>
+        <div class="q-item">특성화고로 진학할 때 중학교 성적이 입학에 영향을 주나요?</div>
+        <div class="q-item">특성화고 붙기 힘드나요?</div>
+        <div class="q-item">특성화고 가려면 하고 싶은 직업이 확실해야 되나요?</div>
+        <div class="q-item">특성화고 갔다가 나랑 안 맞다고 생각되면 어떻게 하나요?</div>
+        <div class="q-item">특성화고를 가게 되면 뭘 먼저 골라요? / 과 먼저 고르나요?</div>
+        <div class="q-item">마이스터고는 성적과 적합 검사가 가장 중요한가요?</div>
+        <div class="q-item">특목고랑 특성화고에서는 정확히 어떤 수업을 하나요?</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- 카테고리 7 -->
+    <div class="category-block">
+      <div class="category-label">
+        <div class="cat-icon" style="background:#f5f0ff;">🧭</div>
+        <span class="cat-name">진로 선택</span>
+        <span class="cat-count">7건</span>
+      </div>
+      <div class="q-list">
+        <div class="q-item">진로는 어떻게 정하면 좋을까요? / 어떤 진로를 선택해야 되나요?</div>
+        <div class="q-item">아직 꿈이 없어서 특성화고를 가려 하는데 취업 성공 확률이 더 높은가요?</div>
+        <div class="q-item">체대 가려면 어떻게 해야 하나요?</div>
+        <div class="q-item">고등학교 종류별 차이에 대해 궁금합니다</div>
+      </div>
+    </div>
+
+    <p class="note">* 유사·중복 답변은 통합 정리 / 의미 없는 응답(없음 등) 제외 후 85건 기준</p>
+  </div>
+
+  <!-- Q4 -->
+  <div class="section-header">
+    <span class="q-badge">Q 4</span>
+    <span class="section-title">추가로 궁금한 내용 <small style="font-size:13px;font-weight:400;color:var(--gray)">(선택 응답)</small></span>
+  </div>
+  <div class="card">
+    <p style="font-size:14px;color:var(--gray);margin-bottom:16px;">대부분 '없음'으로 응답 · 유의미한 추가 응답 <strong style="color:var(--navy)">1건</strong></p>
+    <div class="q-item" style="font-size:14px;border-left-color:var(--sky);">
+      고등학교 수업이 많이 어려운가요? 만약 특성화고를 가게 된다면 공부를 얼마나 해야 되나요?
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<div class="footer" style="max-width:900px;margin:0 auto;padding-bottom:40px;">
+  2026 강북중학교 · 3학년 고교 진학설명회 사전 설문 분석 · 담당교사 제공용
+</div>
+
+<script>
+// ── 색상 팔레트 ──
+const palette1 = ['#2563a8','#3a7fc4','#5b9bd5','#7cb4e0','#e8903a','#f4b05e','#c8dff5'];
+const palette2 = ['#1a2744','#2563a8','#3a7fc4','#5b9bd5','#7cb4e0','#e8903a','#f4b05e'];
+
+// Q1 데이터
+const q1Labels = ['일반고','특성화고','아직 잘 모르겠음','예술·체육계열고','자율형사립고(자사고)','특목고','마이스터고'];
+const q1Data   = [77, 19, 19, 15, 7, 6, 4];
+
+// Q2 데이터
+const q2Labels = ['진로 선택','공부 방법','고교 내신 성적 관리','고등학교생활','중학 내신 성적 관리','대입 준비','고등학교 종류와 차이'];
+const q2Data   = [62, 55, 49, 39, 34, 33, 24];
+
+function buildChart(id, labels, data, colors) {
+  const ctx = document.getElementById(id).getContext('2d');
+  return new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [{
+        data,
+        backgroundColor: colors,
+        borderRadius: 6,
+        borderSkipped: false,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => `  ${ctx.raw}명 선택`
+          }
+        }
+      },
+      scales: {
+        x: {
+          beginAtZero: true,
+          grid: { color: '#eee' },
+          ticks: { font: { family: 'Noto Sans KR', size: 12 }, color: '#6b7a8d' }
+        },
+        y: {
+          grid: { display: false },
+          ticks: { font: { family: 'Noto Sans KR', size: 13 }, color: '#1a2744' }
+        }
+      }
+    }
+  });
+}
+
+function buildPills(containerId, labels, data, colors) {
+  const el = document.getElementById(containerId);
+  labels.forEach((l, i) => {
+    const pill = document.createElement('div');
+    pill.className = 'stat-pill';
+    pill.innerHTML = `<span class="dot" style="background:${colors[i]}"></span>${l} <strong>${data[i]}</strong>`;
+    el.appendChild(pill);
+  });
+}
+
+buildChart('chart1', q1Labels, q1Data, palette1);
+buildChart('chart2', q2Labels, q2Data, palette2);
+buildPills('pills1', q1Labels, q1Data, palette1);
+buildPills('pills2', q2Labels, q2Data, palette2);
+</script>
+
+
+</body></html>
